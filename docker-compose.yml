@@ -1,0 +1,9 @@
+version: '3'
+services:
+  constraint_programming:
+    build:
+      context: .
+    image: basic
+    volumes:
+      - ./data/:/data/
+    command: bash /data/exec.sh
