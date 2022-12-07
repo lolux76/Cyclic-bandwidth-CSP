@@ -11,8 +11,10 @@ python3 /data/pycsp/m2.py
 python3 /data/pycsp/m3.py
 
 for file in /data/models/*; do
-    date +%s
+    time_start=date +%s
     echo "Traitement de l'instance : ${file##*/}"
+    python3 /data/pycsp/m1.py -solve
+    
 done
 
 
