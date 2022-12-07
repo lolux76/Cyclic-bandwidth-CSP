@@ -1,0 +1,19 @@
+Pour installer minizinc : 
+
+$sudo snap install minizinc
+
+
+Pour lancer la commande minizinc : 
+
+$minizinc nomDuModelUtilisé nomDuFichierARésoudre
+
+
+Peut-être faire un fichier sh de type :
+
+for file in ../ReadableFilesMinizinc/*
+do
+    minizinc model_1.mzn file << "${file}.res"
+done
+
+
+//Quelque chose comme ça 
